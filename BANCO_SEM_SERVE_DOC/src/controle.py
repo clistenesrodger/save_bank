@@ -415,7 +415,7 @@ def confirma_extrato():
     
     
 
-
+#operações historico
 
 def consultar_historico():
 
@@ -592,9 +592,10 @@ def sair_7():
     """
     historico_tela.close()
 
-
-
 app = QtWidgets.QApplication([])
+
+
+
 
 tela_login = uic.loadUi("login.ui")
 cadastramento = uic.loadUi("cadastramento.ui")
@@ -615,6 +616,8 @@ menu_de_operacoes.pushButton_2.clicked.connect(sacar)
 menu_de_operacoes.pushButton_3.clicked.connect(transfere)
 menu_de_operacoes.pushButton_4.clicked.connect(consultar_extrato)
 menu_de_operacoes.pushButton_5.clicked.connect(consultar_historico)
+
+"""botoes da tela depositar"""
 
 tela_login.show()
 app.exec()

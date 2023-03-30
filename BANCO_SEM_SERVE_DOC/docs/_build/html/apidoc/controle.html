@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>controle module &#8212; banco 1.1.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-controle">
+<span id="controle-module"></span><h1>controle module<a class="headerlink" href="#module-controle" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.cadastro">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">cadastro</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.cadastro" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função “cadastro” é utilizada para exibir a tela de cadastro de um novo usuário.</p>
+<p>Parameters:</p>
+<p>Nenhum</p>
+<p>Returns:</p>
+<p>Nenhum</p>
+<p>Argumentos:</p>
+<p>Nenhum</p>
+<p>Parameters globais:</p>
+<p>Nenhum</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.confirma_deposito">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">confirma_deposito</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.confirma_deposito" title="Permalink to this definition">¶</a></dt>
+<dd><p>Confirma o depósito na conta do usuário.</p>
+<p>A função se conecta ao banco de dados do sistema e faz uma consulta para obter as informações da conta do usuário. 
+Em seguida, verifica se o valor informado para o depósito é válido e atualiza o saldo e o histórico da conta com as informações do depósito realizado.</p>
+<p>Args:
+Nenhum.</p>
+<p>Returns:
+Nenhum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.confirma_extrato">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">confirma_extrato</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.confirma_extrato" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.confirma_historico">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">confirma_historico</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.confirma_historico" title="Permalink to this definition">¶</a></dt>
+<dd><p>Função: confirma_historico()</p>
+<p>Descrição: Esta função busca as operações registradas no banco de dados para um determinado CPF e exibe essas informações em uma lista na tela.</p>
+<p>Parameters:</p>
+<p>Nenhum parâmetro é passado explicitamente na chamada da função. A variável global_cpf é utilizada para determinar qual é o CPF que deve ser buscado no banco de dados.</p>
+<p>Returns:</p>
+<p>Nenhum valor é retornado explicitamente pela função.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.confirma_sacar">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">confirma_sacar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.confirma_sacar" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função confirma_sacar() recebe os valores informados pelo usuário para realizar uma operação de saque em sua conta bancária, 
+verifica se a senha informada é correta, se o valor do saque é maior que zero e se o saldo é suficiente para realizar a operação. 
+Em caso positivo, atualiza o saldo na tabela de operações e registra a operação de saque no histórico.</p>
+<p>Parameters:</p>
+<p>Não possui Parameters.</p>
+<p>Returns:</p>
+<p>Não possui Returns.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.confirma_transferir">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">confirma_transferir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.confirma_transferir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Essa função “confirma_transferir()” é responsável por confirmar a transferência de um valor entre duas contas cadastradas no banco.</p>
+<p>Parameters:</p>
+<p>nenhum</p>
+<p>Returns:</p>
+<p>nenhum</p>
+<p>Exceções:</p>
+<p>nenhum</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.consultar_extrato">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">consultar_extrato</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.consultar_extrato" title="Permalink to this definition">¶</a></dt>
+<dd><p>Essa função é responsável por exibir a tela de consulta de extrato bancário, onde o usuário pode visualizar todas as operações realizadas em sua conta. A função também conecta os botões presentes na tela às funções correspondentes.</p>
+<p>Parameters:</p>
+<p>Nenhum parâmetro é recebido pela função.</p>
+<p>Returns:</p>
+<p>Nenhum valor é retornado pela função.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.consultar_historico">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">consultar_historico</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.consultar_historico" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função consultar_historico exibe a tela de histórico de operações e conecta seus botões “Voltar”, 
+“Confirmar” e “Sair” às respectivas funções voltar_7(), confirma_historico() e sair_7().</p>
+<p>Não há Parameters de entrada para essa função e nenhum valor de saída.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.depositar">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">depositar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.depositar" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função depositar() exibe a tela de depósito e define as funções a serem executadas quando os botões são pressionados.
+Quando o botão “Voltar” é pressionado, a função voltar_2() é chamada para retornar ao menu de operações. Quando o botão “Confirmar” é pressionado,
+a função confirma_deposito() é chamada para realizar o depósito. Quando o botão “Sair” é pressionado, a função sair_2() é chamada para fechar o programa.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.finalizar_cad">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">finalizar_cad</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.finalizar_cad" title="Permalink to this definition">¶</a></dt>
+<dd><p>é responsável por finalizar o cadastro de um novo usuário no sistema. Ela recebe informações do novo usuário preenchidas na interface gráfica de cadastro e as insere no banco de dados.</p>
+<p>Argumentos:</p>
+<p>Não possui argumentos.</p>
+<p>Comportamento:</p>
+<p>Recupera as informações do novo usuário preenchidas na interface gráfica de cadastro;
+Conecta ao banco de dados usando as credenciais fornecidas;
+Executa as instruções SQL para inserir as informações do novo usuário nas tabelas “pessoa”, “conta” e “operacoes”;
+Exibe mensagem na interface gráfica indicando o sucesso ou falha na operação.</p>
+<p>Returns:</p>
+<p>Não possui Returns.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sacar">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sacar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sacar" title="Permalink to this definition">¶</a></dt>
+<dd><p>A função sacar() exibe a janela de saque (saque) e conecta seus botões de ação a outras funções. 
+Quando o botão “Voltar” é clicado, a função voltar_3() é chamada. Quando o botão “Confirmar” é clicado, a função confirma_sacar() é chamada. 
+E quando o botão “Sair” é clicado, a função sair_3() é chamada.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sair_1">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sair_1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sair_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>fecha a tela menu de operacoes</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sair_2">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sair_2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sair_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>aqui a tela deposita é fechada</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sair_3">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sair_3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sair_3" title="Permalink to this definition">¶</a></dt>
+<dd><p>a tela de saque é fechada</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sair_4">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sair_4</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sair_4" title="Permalink to this definition">¶</a></dt>
+<dd><p>a tela de cadastramento é fechada.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sair_5">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sair_5</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sair_5" title="Permalink to this definition">¶</a></dt>
+<dd><p>tela de transferencia é fechada</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sair_6">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sair_6</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sair_6" title="Permalink to this definition">¶</a></dt>
+<dd><p>a tela extrato é fechada.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.sair_7">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">sair_7</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.sair_7" title="Permalink to this definition">¶</a></dt>
+<dd><p>a tela de historico é fechada.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.transfere">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">transfere</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.transfere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Esta função exibe a tela de transferência de uma conta para outra e conecta os botões “Voltar”, “Confirmar” e “Sair” com as funções correspondentes.</p>
+<p>Argumentos:</p>
+<p>Nenhum.</p>
+<p>Returns:</p>
+<p>Nenhum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.verifica_login">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">verifica_login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.verifica_login" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>é utilizada para verificar se um usuário está cadastrado em um banco de dados e se as informações de login e senha digitadas são válidas.</p>
+</div></blockquote>
+<p>Parameters:</p>
+<p>Nenhum</p>
+<p>Returns:</p>
+<p>Nenhum</p>
+<p>Argumentos:</p>
+<p>Nenhum</p>
+<p>Parameters globais:</p>
+<p>“global_cpf”: Variável global utilizada para armazenar o CPF do usuário logado.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.voltar_1">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">voltar_1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.voltar_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>essa função realiza a abertuta da tela_login() e oculta a tela menu_de_operacoes</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.voltar_2">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">voltar_2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.voltar_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>aqui a tela deposita é ocultada e a tela menu_de_operacoes é aberta , e a tela deposita é limpa.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.voltar_3">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">voltar_3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.voltar_3" title="Permalink to this definition">¶</a></dt>
+<dd><p>aqui a tela saque é ocultada, o menu_de_operacoes é aberta, e o saque.lineEdit é limpo</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.voltar_4">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">voltar_4</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.voltar_4" title="Permalink to this definition">¶</a></dt>
+<dd><p>aqui a tela de cadastramento é limpa, a tela de cadastramento é fechada enquanto a tela_login é aberta.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.voltar_5">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">voltar_5</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.voltar_5" title="Permalink to this definition">¶</a></dt>
+<dd><p>aqui a tela de transferencia é ocultada e limpa,enquanto a tela  de menu_de_operacoes é aberta.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.voltar_6">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">voltar_6</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.voltar_6" title="Permalink to this definition">¶</a></dt>
+<dd><p>a tela de extrato é fechada e limpa, enquanto a tela menu_de_opetacoes é aberta.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="controle.voltar_7">
+<span class="sig-prename descclassname"><span class="pre">controle.</span></span><span class="sig-name descname"><span class="pre">voltar_7</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#controle.voltar_7" title="Permalink to this definition">¶</a></dt>
+<dd><p>a tela de historico é ocultada e limpa, enquanto a tela de menu_de_operacoes é aberta.</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">banco</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, clistenes.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/apidoc/controle.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
